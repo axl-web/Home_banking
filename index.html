@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css-->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!--Google Font-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+      rel="stylesheet"
+    />
+    <!--My style sheet-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Home Banking</title>
+  </head>
+  <body>
+    <header id="header">
+      <img src="./img/logo.png" class="logo" alt="Logo" />
+      <div class="sec-avatar">
+        <span id="nombre">Bienvenido/a </span>
+        <img src="./img/avatar.svg" class="avatar" alt="Avatar" />
+      </div>
+    </header>
+    <div id="container-main">
+      <main class="main">
+        <h1 class="tu-cuenta">Tu cuenta</h1>
+        <div class="menu-container">
+          <div class="buton-container">
+            <button class="links" onclick="extraerDinero()">
+              Extraer dinero
+            </button>
+            <button class="links" onclick="depositarDinero()">
+              Depositar dinero
+            </button>
+            <button class="links" onclick="pagarServicio()">
+              Pagar servicios
+            </button>
+            <button class="links" onclick="transferirDinero()">
+              Transferir dinero
+            </button>
+            <button class="links" onclick="cambiarLimiteDeExtraccion()">
+              Cambiar limite exctraccion
+            </button>
+          </div>
+
+          <div class="cuenta-container">
+            <p>Saldo en tu cuenta</p>
+            <h3 id="saldo-cuenta">$</h3>
+            <p id="limite-extraccion">Tu límite de extracción es:</p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

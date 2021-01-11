@@ -1,0 +1,207 @@
+/* ***** ***** ***** Colors palette ***** ***** ***** */
+
+:root {
+  --blueSapphire: hsl(197, 93%, 29%);
+  --metallicSeaweed: hsl(187, 97%, 29%);
+  --persianGreen: hsl(174, 100%, 33%);
+  --mountainMeadow: hsl(167, 98%, 39%);
+  --paletSpringBud: hsl(63, 69%, 85%);
+  /*palette from: https://coolors.co/05668d-028090-00a896-02c39a-f0f3bd*/
+}
+
+/* ***** ***** ***** General Style ***** ***** ***** */
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  background: linear-gradient(
+    to right,
+    var(--metallicSeaweed),
+    var(--persianGreen)
+  );
+  font-size: 1em;
+}
+
+#nombre {
+  display: inline-block;
+  overflow: hidden;
+  padding: 0px 5px;
+  font-size: 1em;
+  text-overflow: ellipsis;
+  color: var(--paletSpringBud);
+}
+
+/* ***** ***** ***** Header ***** ***** ***** */
+
+#header {
+  width: 100vw;
+  height: 15vh;
+  background: var(--blueSapphire);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.logo {
+  display: inline-block;
+  width: 250px;
+  height: 60px;
+  margin-left: 1.5em;
+}
+.sec-avatar {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.sec-avatar span {
+  margin-right: 1em;
+  color: var(--paletSpringBud);
+}
+.avatar {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 1.5em;
+}
+
+/* ***** ***** ***** Containers ***** ***** ***** */
+
+#container-main {
+  width: 100vw;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1% 0 2% 0;
+  background-color: var(--paletSpringBud);
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.menu-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.buton-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cuenta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 80%;
+  margin: 1% auto;
+  background-color: var(--persianGreen);
+  color: var(--paletSpringBud);
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ***** ***** ***** Menu ****** ***** ***** */
+
+.tu-cuenta {
+  align-self: flex-start;
+  padding-left: 20px;
+  font-size: 2em;
+  font-weight: normal;
+  border-left: 10px solid var(--persianGreen);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  color: var(--blueSapphire);
+  border: 0;
+  background-color: transparent;
+  outline:none;
+}
+
+.links:hover {
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* ***** ***** ***** cuenta ***** ***** ***** */
+
+#saldo-cuenta {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  overflow: hidden;
+  font-size: 6.5vw;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+#limite-extraccion {
+  overflow: hidden;
+  font-size: 1em;
+  text-overflow: ellipsis;
+}
+
+/* ***** ***** ***** @Media ***** ***** ***** */
+@media only screen and (max-width: 800px) {
+  #header {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .menu-container {
+    flex-direction: column-reverse;
+  }
+
+  .buton-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links:hover {
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .cuenta-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 0px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  #saldo-cuenta {
+    font-size: 8.5vw;
+  }
+}
